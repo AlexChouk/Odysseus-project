@@ -31,6 +31,8 @@ public class Moves : MonoBehaviour
 
     Rigidbody rb;
 
+    float gravityScale = 4;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -77,6 +79,8 @@ public class Moves : MonoBehaviour
 
     private void movePlayer()
     {
+        rb.AddForce(Physics.gravity * (gravityScale - 1) * rb.mass);
+
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         if(grounded)
@@ -103,7 +107,7 @@ public class Moves : MonoBehaviour
 
     private void Jump()
     {
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        rb.velocity = new Vector3(0f, 0f, 0f);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }

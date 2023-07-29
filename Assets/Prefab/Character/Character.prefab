@@ -149,6 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6225475192210354933}
   - component: {fileID: 1579498916151088170}
+  - component: {fileID: 8087539377103740864}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -201,6 +202,29 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &8087539377103740864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419623478207396895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2fe909597630a4d832f7b4494e126e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 7
+  groundDrag: 6
+  playerHeaght: 2
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpForce: 15
+  jumpCoolDown: 0.25
+  jumpMultiplier: 0.15
+  jumpKey: 32
+  orientation: {fileID: 8753015014725253694}
 --- !u!1 &4482471503981351418
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +266,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4482471503981351418}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a8297a1e564b91447be03722313c63d3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -394,7 +418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 25314527504999366}
-  - component: {fileID: 6619213811446807336}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -419,17 +442,3 @@ Transform:
   - {fileID: 5165337722274464960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6619213811446807336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7209191870861254994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c2fe909597630a4d832f7b4494e126e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 10
-  orientation: {fileID: 8753015014725253694}
